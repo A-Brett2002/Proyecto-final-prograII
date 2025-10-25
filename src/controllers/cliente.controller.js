@@ -19,8 +19,12 @@ const index = async (req, res) => {
         res.render('cliente/index', { error: 'Error al obtener los clientes' });
     }
 }
+const edit = (req, res) => {
+    res.render('cliente/edit');
+}
 module.exports = {
     create,
     store,
-    index
+    index,
+    edit
 }

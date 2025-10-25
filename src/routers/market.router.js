@@ -6,4 +6,5 @@ router.post('/',Controller.store);
 router.get('/carts',Controller.carts);
 router.get('/',Controller.index);
 router.get('/:id',Controller.show);
+router.delete('/:id', Controller.delate);
 module.exports = router;

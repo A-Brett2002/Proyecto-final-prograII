@@ -4,4 +4,5 @@ const clienteController = require('../controllers/cliente.controller');
 router.get('/create',clienteController.create);
 router.post('/',clienteController.store);
 router.get('/',clienteController.index);
+router.get('/edit',clienteController.edit);
 module.exports = router;

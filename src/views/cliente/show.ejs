@@ -17,5 +17,9 @@
     <p>Fecha: <%= cliente.FECHA %></p>
     <p>Pendiente: <%= cliente.PENDIENTE %></p>
     <a href="/cliente">Volver a la lista de clientes</a>
+    <form action="/clientes/<%= cliente.id_cliente %>?_method=DELETE" method="POST">
+        <button type="submit">Eliminar Cliente</button>
+    </form>
+    
 </body>
 </html>

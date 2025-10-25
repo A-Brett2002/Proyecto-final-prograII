@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Editar</h1>
+    <form action="/clientes/<%= cliente.id_cliente %>?_method=PUT" method="POST">
+        <label for="telefono">Teléfono:</label>
+        <input type="text" id="telefono" name="telefono" value="<%= cliente.telefono %>" required>
+        <br>
+        <label for="nombre">Nombre:</label>
+        <input type="text" id="nombre" name="nombre" value="<%= cliente.nombre %>" required>
+        <br>
+        <label for="direccion">Dirección:</label>
+        <input type="text" id="direccion" name="direccion" value="<%= cliente.direccion %>" required>
+        <br>
+        <label for="nit">NIT:</label>
+        <input type="text" id="nit" name="nit" value="<%= cliente.nit %>" required>
+        <br>
+        <button type="submit">Guardar cambios</button>
+        <br>
+        <form action="/clientes/<%= cliente.id_cliente %>?_method=DELETE" method="POST">
+            <button type="submit">Eliminar</button>
+        </form>
+    </form>
+</body>
+</html>

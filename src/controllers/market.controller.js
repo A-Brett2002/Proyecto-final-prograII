@@ -37,11 +37,19 @@ const carts = (req, res) => {
     const total = selectedMarket.reduce((acc, market) => acc + market.cantidad, -1);
     res.render('market/carts', {selectedMarket, total});
     res.locals.message = `Se han agregado ${total} productos a tu carrito`;
-}    
+}
+const delate = (req, res) => {
+    const marketId = parseInt(req.params.id);
+    const marketIndex = Market.findIndex(market => market.id === marketId);
+    Market.splice(marketIndex, 1);
+    res.redirect('/market');
+}
+
 module.exports = {
     index,
     show,
     create,
     store,
-    carts
+    carts,
+    delate
 }
