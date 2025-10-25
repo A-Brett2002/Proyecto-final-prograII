@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <style>
+        body {
+            background-color: #9cbddf;
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        th, td {
+            padding: 8px;
+            text-align: left;
+            border-bottom: 1px solid #ddd;
+        }
+
+        th {
+            background-color: #4CAF50;
+            color: rgb(255, 255, 255);
+        }
+    </style>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Datos de cliente</title>
+</head>
+<body>
+    <nav>
+        <a href="/">Inicio</a> |
+        <a href="/market">Productos</a> |
+        <a href="/cliente/create">Crear Cliente</a>
+    </nav>
+    <h1>Lista de cliente</h1>
+    <table>
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Nombre</th>
+                <th>nNIT</th>
+                <th>DIRECCION</th>
+                <th>PRECIO</th>
+                <th>ESTADO</th>
+                <th>TEL</th>
+                <th>fecha</th>
+            </tr>
+        </thead>
+        <tbody>
+            <% clientes.forEach(cliente => { %>
+                <tr>
+                    <td><%= cliente.ID_CLIENTE %></td>
+                    <td><%= cliente.NOMBRE %></td>
+                    <td><%= cliente.NIT %></td>
+                    <td><%= cliente.DIRECCION %></td>
+                    <td><%= cliente.PRECIO %></td>
+                    <td><%= cliente.ESTADO %></td>
+                    <td><%= cliente.TELEFONO %></td>
+                    <td><%= cliente.FECHA %></td>
+                </tr>
+            <% }); %>
+        </tbody>
+    </table>
+</body>
+</html>
