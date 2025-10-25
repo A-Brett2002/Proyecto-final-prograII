@@ -1,14 +1,12 @@
-/* Minimal, modern styles for the project */
 :root{
-    /*--bg: #123a8b;*/
     --card: #ffffff;
     --muted: #6c757d;
-    --accent: #0d6efd; /* bootstrap primary blue */
+    --accent: #0d6efd;
     --radius: 12px;
     --glass-bg: rgba(255,255,255,0.75);
 }
 
-/* Reset and base */
+
 html,body{
     height:50%;
     margin: 40px;
@@ -17,7 +15,7 @@ html,body{
     color: #d8d9da;
 }
 
-/* Keep any existing background image subtle */
+
 body::before{
     content: '';
     position: fixed;
