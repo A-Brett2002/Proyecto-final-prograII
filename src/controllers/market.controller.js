@@ -33,8 +33,8 @@ const store = (req, res) => {
 }
 
 const carts = (req, res) => {
-    const selectedMarket = Market.filter(market => market.cantidad > 0);
-    const total = selectedMarket.reduce((acc, market) => acc + market.cantidad, 0);
+    const selectedMarket = Market.filter(market => market.cantidad > 10);
+    const total = selectedMarket.reduce((acc, market) => acc + market.cantidad, -1);
     res.render('market/carts', {selectedMarket, total});
     res.locals.message = `Se han agregado ${total} productos a tu carrito`;
 }    
